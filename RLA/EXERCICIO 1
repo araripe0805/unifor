@@ -1,1 +1,41 @@
+#### FLUXOGRAMA
+
+```mermaid
+flowchart TD
+A([INICIO]) --> B{{Digite as duas notas}}
+B --> C[/Nota1 e Nota2/]
+C --> D[MEDIA == Nota1 + Nota2 / 2]
+D --> E{MEDIA >= 7}
+E --TRUE--> F[O aluno está aprovado com media: MEDIA]
+E --FALSE--> G[O aluno está reprovado com media: MEDIA]
+F --> H([FIM])
+G --> H
+
+```  
+
+
+#### PSEUDOCODIGO
+
+```
+ALGORITMO verificar_MEDIA
+Declare Nota1, Nota2, MEDIA NUMERICO
+ESCREVA "Digite a primeira nota do aluno: "
+LEIA Nota1
+ESCREVA "Digite a segunda nota do aluno: "
+LEIA Nota2
+MEDIA = (Nota1 +Nota2) / 2
+SE MEDIA >= 7 ENTAO
+	ESCREVA "O aluno foi aprovado com média igual: ", MEDIA
+SENAO
+	ESCREVA "O aluno foi reprovado com média igual: ", MEDIA
+FIM ALGORITMO 
+
+
+
+
+
+
+```
+                                                                                                                                                                                                                                                                                                                                                                                 
+  
 
