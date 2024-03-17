@@ -56,20 +56,43 @@ I --> Z
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um funcionário. 
 Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão aumento de 20%; os demais terão aumento de 10%.
 
-#### Fluxograma (1.0 ponto)
+#### FLUXOGRAMA
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite seu salario: }}
+B --> C[/S1/]
+C --> D{S1 >= 500.00}
+D --TRUE--> E[S2 = S1 * 1.1]
+D --FALSE--> F[S2 = S1 * 1.2]
+E --> G{{'Seu novo salario é: ', S2}}
+F --> G
+G --> H([FIM])
+
+
+
 ```
 
-#### Pseudocódigo (1.0 ponto)
+#### PSEUDOCODIGO
+```
+ALGORITMO salario
+DECLARE S1, S2: REAIS
+INICIO
+ESCREVA "Digite seu salario: "
+LEIA S1
+SE S1 >= 500.00 ENTAO
+	S2 = S1 * 1.1
+SENAO
+	S2 = S1 * 1.2
+	ESCREVA "Seu novo salario é: ", S2
+FIM
+
+
+
+
+
 
 ```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
-```
-
 #### Teste de mesa (1.0 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
@@ -96,10 +119,10 @@ FIM_ALGORITMO
 
 #### Teste de mesa (1 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| S1 | S1 >= 500.00 | S2 | SAIDA | 
+|      --      |      --      |      --      |      --      |
+| 200     | 200 >= 500.00       | 240.00    |  Seu novo salario é: 240     |
+| 800   | 800 >= 500.00          | 880        | Seu novo salario é: 880 |
 
 ## Exercício 04 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
