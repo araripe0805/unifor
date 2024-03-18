@@ -151,23 +151,46 @@ FIM
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
 Caso não atender a restrição de idade, calcular quantos anos faltam para o candidato estar apto.
 
-#### Fluxograma (1.0 ponto)
-
+#### FLUXOGRAMA
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite sua idade: }}
+B --> C[/I1/]
+C --> D{I1 >= 18}
+D --TRUE--> E{{Já pode tentar tirar a CNH}}
+D --FALSE--> F[I2 = 18 - I1]
+F --> G{{O candidato devera esperar: I2}}
+E --> H([FIM])
+G --> H
+
+
+
 ```
 
-#### Pseudocódigo (1.0 ponto)
+#### PSEUDOCODIGO
 
 ```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+ALGORITMO CNH
+VERIFICAR I1, I2 NUMERICOS
+INICIO
+ESCREVA "Digite sua idade: "
+LEIA I1
+SE I1 >= 18 ENTAO
+	ESCREVA "Já pode tirar a CNH"
+SENAO
+	I2 = 18 - I1
+	ESCREVA "O candidato devera esperar: ", I2
+FIM
+
+
+
+
+
 ```
 
 #### Teste de mesa (1.0 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| I1 | I1 >= 18 | I2 | SAIDA | 
+|      --      |      --      |      --      |      --      |
+| 18     | 18 >= 18       | 0    |  Já pode tirar a CNH     |
+| 19   | 19 >= 18          | -1        | Já pode tirar a CNH |
