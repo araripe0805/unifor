@@ -103,26 +103,49 @@ FIM
 ## Exercício 03 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
 
-#### Fluxograma (1 ponto)
+#### FLUXOGRAMA
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite as duas notas: }}
+B --> C[/N1, N2/]
+C --> D[M = N1 + N2 / 2]
+D --> E{M >= 7.00}
+E --TRUE--> F{{"O aluno foi aprovado com media: ", M}}
+E --FALSE--> G{{"O aluno foi reprovado com media: ", M}}
+F --> H([FIM])
+G --> H
+
+
+
 ```
 
-#### Pseudocódigo (1 ponto)
+#### PSEUDOCODIGO
 
 ```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+ALGORITMO media
+DECLARE N1, N2, M REAIS
+INICIO
+ESCREVA "Digite suas duas notas: "
+LEIA N1, N2
+M = N1 + N2 / 2
+SE M >= 7.00 ENTAO
+	ESCREVA "O aluno foi aprovado com media: ", M
+SENAO 
+	ESCREVA "O aluno foi aprovado com media: ", M
+FIM
+
+
+
+
 ```
 
 #### Teste de mesa (1 ponto)
 
-| S1 | S1 >= 500.00 | S2 | SAIDA | 
-|      --      |      --      |      --      |      --      |
-| 200     | 200 >= 500.00       | 240.00    |  Seu novo salario é: 240     |
-| 800   | 800 >= 500.00          | 880        | Seu novo salario é: 880 |
+| N1 | N2 | M | M >= 7.00 | SAIDA |
+|      --      |      --      |      --      |      --      |      --      |
+| 8.00     | 7.00      | 7.50    |  7.50 >= 7.00     | Aluno aprovado |
+| 5.00   | 6.00          | 5.50        | 5.50 <= 7.00 | Aluno reprovado |
 
 ## Exercício 04 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
