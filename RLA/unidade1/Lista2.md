@@ -89,18 +89,33 @@ FIM
 ### Exercício 02 (2.5 pontos)
 Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
 
-#### Fluxograma (1.0 ponto)
-
+#### FLUXOGRAMA
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite uma temperatura em celcius: }}
+B --> C[/C/]
+C --> D[F = 9 * C / 5 + 32]
+D --> E{{"A temperatura em fahrenheit é: ", F}}
+E --> F([FIM])
+
 ```
 
-#### Pseudocódigo (1.0 ponto)
+#### PSEUDOCODIGO
+
 
 ```
-Algoritmo ConverteCelsiusFarenheit
-FIM_ALGORITMO
+ALGORITMO temperatura
+DECLARE C, F REAIS
+INICIO
+ESCREVA "Digite uma temperatura em celcius: "
+LEIA C
+F = 9 * C / 5 + 32 ENTAO
+	ESCREVA "A temperatura em fahrenheit é: ", F
+FIM
+
+
+
+
 ```
 
 #### Teste de mesa (0.5 ponto)
