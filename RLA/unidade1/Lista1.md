@@ -97,8 +97,8 @@ FIM
 
 | S1 | S1 >= 500.00 | S2 | SAIDA | 
 |      --      |      --      |      --      |      --      |
-| 200     | 200 >= 500.00       | 240.00    |  Seu novo salario é: 240     |
-| 800   | 800 >= 500.00          | 880.00        | Seu novo salario é: 880 |
+| 200     | 200.00 >= 500.00       | 240.00    |  Seu novo salario é: 240.00     |
+| 800   | 800.00 >= 500.00          | 880.00        | Seu novo salario é: 880.00 |
 
 ## Exercício 03 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
