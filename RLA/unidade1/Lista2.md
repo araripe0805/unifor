@@ -51,26 +51,40 @@ J --> I
 ### Exercício 01 (2.5 pontos)
 Calcule a média de quatro números inteiros dados.
 
-#### Fluxograma (1.0 ponto)
-
+#### FLUXOGRAMA
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite quatro numeros inteiros}}
+B --> C[/N1, N2, N3, N4/]
+C --> D[M = N1 + N2 + N3 + N4 / 4]
+D --> E{{"A media desses quatro numeros é: ", M}}
+E --> F([FIM])
+
+
+
 ```
 
-#### Pseudocódigo (1.0 ponto)
+#### PSEUDOCODIGO
 
 ```
-Algoritmo Media
-FIM_ALGORITMO
+ALGORITMO media
+DECLARE N1, N2, N3, N4 INTEIROS
+INICIO
+ESCREVA "Digite quatro numeros inteiros: "
+LEIA N1, N2, N3, N4
+M = N1 + N2 + N3 + N4 / 4 ENTAO
+	ESCREVA "A media desses quatro numeros é: ", M
+FIM
+
+
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| N1 | N2 | N3 | N4 | M | SAIDA | 
+|      --      |      --      |      --      |      --      |      --      |      --      | 
+| 4     | 9       | 7    |  2     | 5.5    |      A media é: 5.5      |
+| 3   | 8          | 5        | 9 | 13  |      A media é: 13      |
 
 ### Exercício 02 (2.5 pontos)
 Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
