@@ -174,10 +174,10 @@ SE I1 5 >= I1 <= 7 ENTAO
 				SENAO
 				I1 >= 18 ENTAO 
 					ESCREVA "A categoria é adulto"
-				FIM
-			FIM
-		FIM
-	FIM
+				FIM_SE
+			FIM_SE
+		FIM_SE
+	FIM_SE
 FIM
 				
 	
