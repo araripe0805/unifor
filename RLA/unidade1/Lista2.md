@@ -198,23 +198,67 @@ FIM
 ### Exercício 04 (2.5 pontos)
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
 
-#### Fluxograma (1.0 ponto)
-
+#### FLUXOGRAMA
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite uma idade: }}
+B --> C[/I1/]
+C --> D{5 >= I1 <=7}
+D --TRUE--> E{{A categoria é infantio A}}
+E --> F([FIM])
+D --FALSE--> G{8 >= I1 <= 10}
+G --TRUE--> H{{A categoria é infantia B}}
+H --> F
+G --FALSE--> I{11 >= I1 <= 13}
+I --TRUE--> J{{A categoria é juvenil A}}
+J --> F
+I --FALSE--> L{14 >= I1 <= 17}
+L --TRUE--> K{{A categoria é juvenil B}}
+K --> F
+L --FALSE--> M{I1 >= 18}
+M --> N{{A categoria é adulto}}
+N --> F
+
 ```
 
-#### Pseudocódigo (1.0 ponto)
+#### PSEUDOCODIGO
+```
+ALGORITMO categoria
+DECLARE I1 NUMERAIS
+INICIO
+ESCREVA "Digite uma idade: "
+LEIA I1
+SE I1 5 >= I1 <= 7 ENTAO
+	ESCREVA "A categoria é infantil A"
+	SENAO
+	8 >= I1 <= 10 ENTAO
+		ESCREVA "A categoria é infantia B"
+		SENAO 
+		11 >= I1 <= 13 ENTAO
+			ESCREVA "A categoria é juvenil A"
+			SENAO 
+			14 >= I1 <= 17 ENTAO
+				ESCREVA "A categoria é juvenil B"
+				SENAO
+				I1 >= 18 ENTAO 
+					ESCREVA "A categoria é adulto"
+				FIM_SE
+			FIM_SE
+		FIM_SE
+	FIM_SE
+FIM
+				
+	
+		
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
-```
+
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| I1 | SAIDA | 
+|      --      |      --      | 
+| 5     | A categoria é infantil A       |
+| 11   | A categoria é juvenil A          |
+| 18   | A categoria é adulta         |
+| 15   | A categoria é juvenil B          |
