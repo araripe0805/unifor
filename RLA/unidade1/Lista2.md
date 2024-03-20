@@ -129,19 +129,62 @@ FIM
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
 O algoritmo deve retornar o resultado da operação selecionada simulando todas as operações de uma calculadora simples.
 
-#### Fluxograma (1.0 ponto)
 
+#### FLUXOGRAMA
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite uma idade: }}
+B --> C[/I1/]
+C --> D{5 >= I1 <=7}
+D --TRUE--> E{{A categoria é infantio A}}
+E --> F([FIM])
+D --FALSE--> G{8 >= I1 <= 10}
+G --TRUE--> H{{A categoria é infantia B}}
+H --> F
+G --FALSE--> I{11 >= I1 <= 13}
+I --TRUE--> J{{A categoria é juvenil A}}
+J --> F
+I --FALSE--> L{14 >= I1 <= 17}
+L --TRUE--> K{{A categoria é juvenil B}}
+K --> F
+L --FALSE--> M{I1 >= 18}
+M --> N{{A categoria é adulto}}
+N --> F
+
 ```
 
-#### Pseudocódigo (1.0 ponto)
+#### PSEUDOCODIGO
+```
+ALGORITMO categoria
+DECLARE I1 NUMERAIS
+INICIO
+ESCREVA "Digite uma idade: "
+LEIA I1
+SE I1 5 >= I1 <= 7 ENTAO
+	ESCREVA "A categoria é infantil A"
+	SENAO
+	8 >= I1 <= 10 ENTAO
+		ESCREVA "A categoria é infantia B"
+		SENAO 
+		11 >= I1 <= 13 ENTAO
+			ESCREVA "A categoria é juvenil A"
+			SENAO 
+			14 >= I1 <= 17 ENTAO
+				ESCREVA "A categoria é juvenil B"
+				SENAO
+				I1 >= 18 ENTAO 
+					ESCREVA "A categoria é adulto"
+				FIM
+			FIM
+		FIM
+	FIM
+FIM
+				
+	
+		
 
 ```
-Algoritmo Calculadora
-FIM_ALGORITMO
-```
+
 
 #### Teste de mesa (0.5 ponto)
 
