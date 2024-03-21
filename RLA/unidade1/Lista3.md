@@ -97,23 +97,49 @@ F --LOOP--> E
 ### Exercício 01 (2.5 pontos)
 Atualize o algoritmo para determinar se um número inteiro e positivo é par ou ímpar, usando uma laço condicional para aceitar apenas números maiores ou iguais a zero. 
 
-#### Fluxograma (1.0 ponto)
+#### FLUXOGRAMA
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
-```
+A([INICIO]) --> B{{Digite um numero inteiro e positivo}}
+B --> C[/N1/]
+C --> D{N1 >= 0}
+D --LOOP--> B
+D --TRUE--> F[R = N1 % 2]
+F --> G{R = 0}
+G --TRUE--> H{{O numero é par}}
+G --FALSE--> I{{O numero é impar}}
+H --> J([FIM])
+I --> J
 
-#### Pseudocódigo (1.0 ponto)
+```
+#### PSEUDOCODIGO
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+ALGORITMO par_impar
+DECLARE N1, R : INTEIROS
+INICIO
+REPITA
+	ESCREVA "Digite um numero inteiro e positivo"
+	LEIA N1
+	ATE_QUE N1 >= 0 ENTAO
+	R = N1 % 2
+	SE R = 0 ENTAO
+		ESCREVA "O numero é par"
+	SENAO 
+		ESCREVA "O numero é impar"
+	FIM_SE
+FIM
+	
+
+
+
+
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+| N1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
 | Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
 | verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
