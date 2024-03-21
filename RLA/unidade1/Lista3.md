@@ -199,26 +199,45 @@ FIM_ENQUANTO
 Dada uma sequência de números inteiros, calcular a sua soma. 
 Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrever o número 35.
 
-#### Fluxograma (1.0 ponto)
+
+
+
+#### FLUXOGRAMA
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite 3 numeros inteiros}}
+B --> C[/N1, N2, N3/]
+C --> D[R = N1 + N2 + N3]
+D --> E{{Sua soma é igual a: R}}
+E --> F([FIM])
 ```
 
-#### Pseudocódigo (1.0 ponto)
+#### PSEUDOCODIGO
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+ALGORITMO soma
+DECLARE N1, N2, N3,R : INTEIROS
+INICIO
+ESCREVA "Digite 3 numeros inteiros"
+LEIA N1, N2, N3
+R = N1 + N2 + N3 ENTAO
+	ESCREVA "Sua soma é igual: ", R
+FIM
+
+
+
+
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+| N1 | N2 | N3 | R | SAIDA | 
 |      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| 5     | 6       | 7    |  18     | A soma dos 3 numeros é: 18    |
+| 9   | -3          | 3        | 9 | A soma dos 3 numeros é: 9  |
+|      7      |      -5      |      2      |      0      |      A soma dos 3 numeros é: 0      |
+|      0      |      9      |      1      |      10      |      A soma dos 3 numeros é: 10      |
 
 ### Exercício 04 (2.5 pontos)
 Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. 
