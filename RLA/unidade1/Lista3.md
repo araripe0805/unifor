@@ -139,10 +139,12 @@ FIM
 
 #### Teste de mesa (0.5 ponto)
 
-| N1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+| N1 | N1 >= 0 | R | R = 0 | SAIDA | 
 |      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| 5     | TRUE      | 1    |  FALSE     | O numero é impar    |
+| 10   | TRUE          | 0        | TRUE | O numero é par  |
+|      12      |      TRUE      |      0      |      TRUE      |      O numero é par      |
+|      15      |      TRUE      |      1      |      FALSE      |      O numero é impar      |
 
 ### Exercício 02 (2.5 pontos)
 Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
