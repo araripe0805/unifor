@@ -180,12 +180,20 @@ FIM_ENQUANTO
 
 #### Teste de mesa (0.5 ponto)
 
-| N1 | N1 <= 30  | SAIDA | 
-|      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |
-| verticais,   | mas          | não é        |
-|      --      |      --      |      --      |
-|      --      |      --      |      --      |
+|  | N1  | 	N2 |      N1 <= N2      |      SAIDA      |       N1 =+ 3      |  
+|      --      |      --      |      --      |      --      |       --      |       --      |  
+| 1     | 0       | 30    | TRUE           |      0      |       3      |  
+| 2   | 3          | 30        |      TRUE      |      3      |       6      |  
+|      3      |      6      |      30      |      TRUE      |      6      |       9      |  
+|      4      |      9      |      30      |      TRUE      |      9      |       12      |  
+|      5      |      12      |      30      |      TRUE      |      12      |       15      |
+|      6      |      15      |      30      |      TRUE      |      15      |       18      | 
+|      7      |      18      |      30      |      TRUE      |      18      |       21      | 
+|      8      |      21      |      30      |      TRUE      |      21      |       24      | 
+|      9      |      24      |      30      |      TRUE      |      24      |       27      | 
+|      10      |      27      |      30      |      TRUE      |      27      |       30      | 
+|      11      |      30      |      30      |      TRUE      |      30      |       33      |
+|      12      |      33      |      30      |      FALSE      |      33      |       36      |
 
 ### Exercício 03 (2.5 pontos)
 Dada uma sequência de números inteiros, calcular a sua soma. 
