@@ -130,59 +130,51 @@ Receba dois números reais e um operador e efetue a operação correspondente co
 O algoritmo deve retornar o resultado da operação selecionada simulando todas as operações de uma calculadora simples.
 
 
+
+
 #### FLUXOGRAMA
+
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{Digite uma idade: }}
-B --> C[/I1/]
-C --> D{5 >= I1 <=7}
-D --TRUE--> E{{A categoria é infantio A}}
-E --> F([FIM])
-D --FALSE--> G{8 >= I1 <= 10}
-G --TRUE--> H{{A categoria é infantia B}}
-H --> F
-G --FALSE--> I{11 >= I1 <= 13}
-I --TRUE--> J{{A categoria é juvenil A}}
-J --> F
-I --FALSE--> L{14 >= I1 <= 17}
-L --TRUE--> K{{A categoria é juvenil B}}
+A([INICIO]) --> B{{Digite dois numeros reais e um operador}}
+B --> C[/N1, N2, O1/]
+C --> D{O1 =+}
+D --TRUE--> E[R = N1 + N2]
+E --> F{{O resultado da O1 é: R}}
+F --> G([FIM])
+D --FALSE--> H{O1 =-}
+H --TRUE--> I[R = N1 - N2]
+I --> F
+H --FALSE--> J{O1 =*}
+J --TRUE--> K[R = N1 * N2]
 K --> F
-L --FALSE--> M{I1 >= 18}
-M --> N{{A categoria é adulto}}
-N --> F
-
+J --FALSE--> L{O1 =/}
+L --> M[R = N1 / N2]
+M --> F
 ```
 
 #### PSEUDOCODIGO
-```
-ALGORITMO categoria
-DECLARE I1 NUMERAIS
-INICIO
-ESCREVA "Digite uma idade: "
-LEIA I1
-SE I1 5 >= I1 <= 7 ENTAO
-	ESCREVA "A categoria é infantil A"
-	SENAO
-	8 >= I1 <= 10 ENTAO
-		ESCREVA "A categoria é infantia B"
-		SENAO 
-		11 >= I1 <= 13 ENTAO
-			ESCREVA "A categoria é juvenil A"
-			SENAO 
-			14 >= I1 <= 17 ENTAO
-				ESCREVA "A categoria é juvenil B"
-				SENAO
-				I1 >= 18 ENTAO 
-					ESCREVA "A categoria é adulto"
-				FIM_SE
-			FIM_SE
-		FIM_SE
-	FIM_SE
-FIM
-				
-	
-		
 
+```
+ALGORITMO operadores
+DECLARE N1, N2, R : REAIS, O1: CARACTERES
+INICIO 
+ESCREVA "Digite dois numeros reais e um operador"
+LEIA N1, N2, O1
+SE O1 =+ ENTAO
+	R = N1 + N2
+SENAO 
+O1 =- ENTAO
+	R = N1 - N2
+	SENAO 
+	O1 =* ENTAO
+		R = N1 * N2
+		SENAO
+		O1 =/ ENTAO
+			R = N1 / N2
+ESCREVA "O resultado da O1 é: R"
+FIM
+	
 ```
 
 
