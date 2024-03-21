@@ -180,12 +180,12 @@ FIM
 
 #### Teste de mesa (0.5 ponto)
 
-| I1 | SAIDA | 
-|      --      |      --      | 
-| 5     | A categoria é infantil A       |
-| 11   | A categoria é juvenil A          |
-| 18   | A categoria é adulta         |
-| 15   | A categoria é juvenil B          |
+| N1 | N2 |      O1      |      O1 =+      |      01 =-      |      O1 =*      |      O1 =/      |      R      |      SAIDA      |
+|      --      |      --      |      --      |      --      |      --      |      --      |      --      |      --      |      --      | 
+| 5     | 2       |      +      |      TRUE      |      FALSE      |      FALSE      |      FALSE      |      7      |      O resutado da soma é: 7      |
+| 11   | 2          |      -      |      FALSE      |      TRUE      |      FALSE      |      FALSE      |      9      |      O resultado da subtração é: 9      |
+| 18   | 2         |      *      |      FALSE      |      FALSE      |      TRUE      |      FALSE      |      36      |      O resultado da multiplicação é: 36      |
+| 15   | 3          |      /      |      FALSE      |      FALSE      |      FALSE      |      TRUE      |      5      |      O resultado da divisão é: 5      |
 
 ### Exercício 04 (2.5 pontos)
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
