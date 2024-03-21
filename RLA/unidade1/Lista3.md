@@ -149,26 +149,43 @@ FIM
 ### Exercício 02 (2.5 pontos)
 Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
 
-#### Fluxograma (1.0 ponto)
 
+
+#### FLUXOGRAMA
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
-```
+A([INICIO]) --> B[/N1 = 0/]
+B --> C{N1 <= 30}
+C --TRUE--> D{{Numero = N1}}
+D --> E[N1 =+ 3]
+E --LOOP--> C
+C --FALSE--> F([FIM])
 
-#### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+#### PSEUDOCODIGO
+
+```
+ALGORITMO multiplos_3
+DECLARE N1 : NUMERICOS
+INICIO
+N1 = 0
+ENQUANTO N1 <= 30 FAÇA
+	ESCREVA "Numero = N1"
+	N1 =+ 3
+FIM_ENQUANTO
+
+
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| N1 | N1 <= 30  | SAIDA | 
+|      --      |      --      |      --      | 
+| Adicione     | espaço       | se quiser    |
+| verticais,   | mas          | não é        |
+|      --      |      --      |      --      |
+|      --      |      --      |      --      |
 
 ### Exercício 03 (2.5 pontos)
 Dada uma sequência de números inteiros, calcular a sua soma. 
