@@ -81,9 +81,9 @@ INICIO
 ESCREVA "Digite seu salario: "
 LEIA S1
 SE S1 >= 500.00 ENTAO
-	S2 = S1 * 1.1
+	S2 <- S1 * 1.1
 SENAO
-	S2 = S1 * 1.2
+	S2 <- S1 * 1.2
 ESCREVA "Seu novo salario é: ", S2
 FIM
 
@@ -126,11 +126,11 @@ G --> H
 
 ```
 ALGORITMO media
-DECLARE N1, N2, M REAIS
+DECLARE N1, N2, M: REAIS
 INICIO
 ESCREVA "Digite suas duas notas: "
 LEIA N1, N2
-M = N1 + N2 / 2
+M <- N1 + N2 / 2
 SE M >= 7.00 ENTAO
 	ESCREVA "O aluno foi aprovado com media: ", M
 SENAO 
