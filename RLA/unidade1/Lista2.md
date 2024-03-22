@@ -85,6 +85,8 @@ FIM
 |      --      |      --      |      --      |      --      |      --      |      --      | 
 | 4     | 9       | 7    |  2     | 5.5    |      A media é: 5.5      |
 | 3   | 8          | 5        | 9 | 13  |      A media é: 13      |
+|      5      |      7      |      10      |      0      |      5.5      |      A media é: 5.5      |
+|      8      |      9      |      6      |      2      |      6.25      |      A media é: 6.25      |
 
 ### Exercício 02 (2.5 pontos)
 Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
