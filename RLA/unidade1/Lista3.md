@@ -207,6 +207,50 @@ Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrev
 
 
 
+#### FLUXOGRAMA
+
+```mermaid
+flowchart TD
+A([INICIO]) --> B{{Digite uma quantidade de numeros inteiros: }}
+B --> C[/N1/]
+C --> D[S = 0]
+D --> E[[I DE 1 ATÉ N1 PASSO 1]]
+E --I <= N1--> F{{Digite o numero I: }}
+F --> G[/N2/]
+G --> H[S = S + N2]
+H --> I[I = I + 1]
+I --LOOP--> E
+E --I > N1--> J{{A soma dos N1 numeros é: S}}
+J --> K([FIM])
+
+```
+
+#### PSEUDOCODIGO
+
+```
+ALGORITMO soma
+DECLARE N1, S, I, N2 : INTEIROS
+INICIO
+ESCREVA "Digite uma quantidade de numeros inteiros: "
+LEIA N1
+S <- 0
+PARA I DE 1 ATE N1 PASSO 1 FAÇA
+	ESCREVA "Digite o numero, I:  "
+	LEIA N2
+	S <- S + N2
+	I <- I + 1
+FIM_PARA
+ESCREVA "A soma nos N1 numeros é: ", S
+FIM
+
+
+
+
+```
+#### TESTE DE MESA
+
+|      --      |      --      |      --      |      --      |
+
 
 
 
