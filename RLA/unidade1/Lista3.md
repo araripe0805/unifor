@@ -205,42 +205,11 @@ Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrev
 
 
 
-#### FLUXOGRAMA
-
-```mermaid
-flowchart TD
-A([INICIO]) --> B{{Digite 3 numeros inteiros}}
-B --> C[/N1, N2, N3/]
-C --> D[R = N1 + N2 + N3]
-D --> E{{Sua soma é igual a: R}}
-E --> F([FIM])
-```
-
-#### PSEUDOCODIGO
-
-```
-ALGORITMO soma
-DECLARE N1, N2, N3,R : INTEIROS
-INICIO
-ESCREVA "Digite 3 numeros inteiros"
-LEIA N1, N2, N3
-R = N1 + N2 + N3 ENTAO
-	ESCREVA "Sua soma é igual: ", R
-FIM
 
 
 
 
-```
 
-#### Teste de mesa (0.5 ponto)
-
-| N1 | N2 | N3 | R | SAIDA | 
-|      --      |      --      |      --      |      --      |      --      | 
-| 5     | 6       | 7    |  18     | A soma dos 3 numeros é: 18    |
-| 9   | -3          | 3        | 9 | A soma dos 3 numeros é: 9  |
-|      7      |      -5      |      2      |      0      |      A soma dos 3 numeros é: 0      |
-|      0      |      9      |      1      |      10      |      A soma dos 3 numeros é: 10      |
 
 ### Exercício 04 (2.5 pontos)
 Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. 
