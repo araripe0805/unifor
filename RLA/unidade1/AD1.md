@@ -72,7 +72,7 @@ I --> J{{"b =", b}}
 
 ```
 Algoritmo TrocaValores
-DECLARE a, b, aux: REAIS
+DECLARE a, b, aux: INTEIROS
 INICIO
 ESCREVA "Digite o valor da a: "
 LEIA a
@@ -151,7 +151,7 @@ J --LOOP--> E
 
 ```
 Algoritmo ContaAprovacoes
-DECLARE n, cont, i, nota: REAIS
+DECLARE n, cont, i: REAIS
 INICIO
 ESCREVA "Digite o numero de alunos: "
 LEIA n
@@ -299,7 +299,7 @@ I --LOOP--> E
 
 ```
 Algoritmo SomaSerie
-DECLARE S, i, n, numerador, denominador: REAIS
+DECLARE S, i, n, numerador, denominador,TERMO: REAIS
 INICIO
 ESCREVA "Digite o numero de termos da serie S: "
 LEIA n
@@ -359,8 +359,19 @@ H --> I
 
 ```
 Algoritmo CalcFatorial
+DECLARE n, i, fator:  REAIS
 INICIO
-...
+ESCREVA "Digite um numero inteiro não negativo: "
+LEIA  n
+SE n >= 0
+    fator = 1
+    PARA i de 1 ATE n PASSO 1 FAÇA
+        fator = fator * i
+    FIM_PARA
+    ESCREVA "O fatorial de, n, é: ", fator
+SENAO
+    ESCREVA "O valor deve ser maior ou igual a zero!"
+
 FIM
 ```
 
@@ -407,8 +418,18 @@ I --LOOP--> E
 
 ```
 Algoritmo GeraFibonacci
+DECLARE a, b, i, n, termo_atual: INTEIRO
 INICIO
-...
+ESCREVA "Numero de termos da serie Fibonacci: "
+LEIA n
+a = 0
+b = 1
+PARA i de 1 ATE PASSO 1 FAÇA
+    ESCREVA "a"
+    termo_atual = a + b
+    a = b
+    b = termo_atual
+FIM_PARA
 FIM
 ```
 #### Teste de mesa
@@ -458,9 +479,23 @@ E --> W
 
 ```
 Algoritmo InverteInteiro
+DECLARE num, num_inv, digito, numeros: INTEIRO
 INICIO
-...
+ESCREVA "Digite um numero inteiro: "
+LEIA num
+SE num > 0
+    num_inv = 0
+    ENQUANTO num = 0 FAÇA
+        digito = numero % 10
+        num_inv = num_inv * 10 + digito
+        numero = numero / 10
+    FIM_ENQUANTO
+    ESCREVA "Numero invertido, num_inv"
+SENAO
+    ESCREVA "O numero deve ser positivo"
+FIM_SE
 FIM
+
 ```
 
 #### Teste de mesa
