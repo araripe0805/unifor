@@ -1,14 +1,14 @@
 <img src="https://drive.google.com/uc?id=1SOzRTjUt7cuBJpSqoK90fcAiKBrnpUJo" width="400">
 
-**Curso:** preencha com seus dados <br>
-**Disciplina:** preencha com seus dados <br>
+**Curso:** ENG. de COMP <br>
+**Disciplina:** RACIOCIONIO LOGICO <br>
 **Código/Turma:** preencha com seus dados <br>
 **Professor:** Ricardo Carubbi <br>
-**Data:** preencha com a data de envio <br>
-**Aluno(a):** preencha com seus dados <br>
-**Matrícula:** preencha com seus dados <br>
+**Data:** 21/03/2024 <br>
+**Aluno(a):** INACIO ARARIPE FIGUEIREDO <br>
+**Matrícula:** 2410316 <br>
 
-**1a chamada (Sim/Não):** preencha com a opção correta <br>
+**1a chamada (Sim/Não):** SIM <br>
 **2a chamada (Sim/Não):** preencha com a opção correta
 
 # Avaliação Diagnóstica 1
