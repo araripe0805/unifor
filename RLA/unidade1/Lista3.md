@@ -1,5 +1,5 @@
 # UNIFOR
-**Nome**: Nome do estudante <br>
+**Nome**: INACIO ARARIPE FIGUEIREDO <br>
 **Disciplina**: Raciocínio lógico algorítm
 
 ## Exercício exemplo 1
