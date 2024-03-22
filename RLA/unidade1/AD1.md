@@ -297,20 +297,18 @@ I --LOOP--> E
 
 ```
 Algoritmo SomaSerie
-DECLARE S, i, n, numerador, denominador,TERMO: REAIS
+DECLARE S, i, n, numerador, denominador,TERMO: INTEIROS
 INICIO
 ESCREVA "Digite o numero de termos da serie S: "
 LEIA n
-S = 0
+S <- 0
 PARA i de 0 ATE n PASSO 1 FAÇA
-    numerador = 2*i + 1
-    denominador =2*i + 2
+    numerador <- (2 * i) + 1
+    denominador <- (2 * i) + 2
     termo = numerador / denominador
-    S += termo
+    S <- S termo
 FIM_PARA
-    ESCREVA " Soma da série S é: " , S
-
-...
+ESCREVA " Soma da série S é: " , S
 FIM
 ```
 
@@ -357,19 +355,19 @@ H --> I
 
 ```
 Algoritmo CalcFatorial
-DECLARE n, i, fator:  REAIS
+DECLARE n, i, fator:  INTEIROS
 INICIO
 ESCREVA "Digite um numero inteiro não negativo: "
 LEIA  n
-SE n >= 0
-    fator = 1
+SE n >= 0 ENTAO
+    fator <- 1
     PARA i de 1 ATE n PASSO 1 FAÇA
-        fator = fator * i
+        fator <- fator * i
     FIM_PARA
     ESCREVA "O fatorial de, n, é: ", fator
 SENAO
     ESCREVA "O valor deve ser maior ou igual a zero!"
-
+FIM_SE
 FIM
 ```
 
@@ -420,13 +418,13 @@ DECLARE a, b, i, n, termo_atual: INTEIRO
 INICIO
 ESCREVA "Numero de termos da serie Fibonacci: "
 LEIA n
-a = 0
-b = 1
+a <- 0
+b <- 1
 PARA i de 1 ATE PASSO 1 FAÇA
     ESCREVA "a"
-    termo_atual = a + b
-    a = b
-    b = termo_atual
+    termo_atual <- a + b
+    a <- b
+    b <- termo_atual
 FIM_PARA
 FIM
 ```
@@ -481,12 +479,12 @@ DECLARE num, num_inv, digito, numeros: INTEIRO
 INICIO
 ESCREVA "Digite um numero inteiro: "
 LEIA num
-SE num > 0
-    num_inv = 0
-    ENQUANTO num = 0 FAÇA
-        digito = numero % 10
-        num_inv = num_inv * 10 + digito
-        numero = numero / 10
+SE num >= 0 ENTAO
+    num_inv <- 0
+    ENQUANTO num > 0 FAÇA
+        digito <- num % 10
+        num_inv <- (num_inv * 10) + digito
+        numero <- numero / 10
     FIM_ENQUANTO
     ESCREVA "Numero invertido, num_inv"
 SENAO
