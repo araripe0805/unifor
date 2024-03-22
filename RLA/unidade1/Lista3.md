@@ -141,7 +141,7 @@ FIM
 
 | N1 | N1 >= 0 | R | R = 0 | SAIDA | 
 |      --      |      --      |      --      |      --      |      --      | 
-| 5     | TRUE      | 1    |  FALSE     | O numero é impar    |
+| -2     | FALSE      | 1    |  FALSE     | O numero é impar    |
 | 10   | TRUE          | 0        | TRUE | O numero é par  |
 |      12      |      TRUE      |      0      |      TRUE      |      O numero é par      |
 |      15      |      TRUE      |      1      |      FALSE      |      O numero é impar      |
