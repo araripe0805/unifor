@@ -131,7 +131,7 @@ DECLARE N1, N2, M: REAIS
 INICIO
 ESCREVA "Digite suas duas notas: "
 LEIA N1, N2
-M <- N1 + N2 / 2
+M <- (N1 + N2) / 2
 SE M >= 7.00 ENTAO
 	ESCREVA "O aluno foi aprovado com media: ", M
 SENAO 
