@@ -111,8 +111,8 @@ DECLARE C, F REAIS
 INICIO
 ESCREVA "Digite uma temperatura em celcius: "
 LEIA C
-F = 9 * C / 5 + 32 ENTAO
-	ESCREVA "A temperatura em fahrenheit é: ", F
+F <- (9 * C) / 5 + 32 ENTAO
+ESCREVA "A temperatura em fahrenheit é: ", F
 FIM
 
 
