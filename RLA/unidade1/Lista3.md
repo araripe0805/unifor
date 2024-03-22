@@ -104,7 +104,8 @@ flowchart TD
 A([INICIO]) --> B{{Digite um numero inteiro e positivo}}
 B --> C[/N1/]
 C --> D{N1 >= 0}
-D --LOOP--> B
+D --> E{{O numero deve ser positivo}}
+E --LOOP--> B
 D --TRUE--> F[R = N1 % 2]
 F --> G{R = 0}
 G --TRUE--> H{{O numero é par}}
@@ -119,12 +120,14 @@ I --> J
 ALGORITMO par_impar
 DECLARE N1, R : INTEIROS
 INICIO
-REPITA
-	ESCREVA "Digite um numero inteiro e positivo"
-	LEIA N1
-	ATE_QUE N1 >= 0 ENTAO
+ESCREVA "Digite um numero inteiro e positivo"
+LEIA N1
+ENQUANTO N1 > 0 ENTAO
+	ESCREVA "Digite um numero positivo"
+	FIM_ENQUANTO
+SE N1 >= 0 ENTAO
 	R = N1 % 2
-	SE R = 0 ENTAO
+	SE R = 0 ENTAO 
 		ESCREVA "O numero é par"
 	SENAO 
 		ESCREVA "O numero é impar"
@@ -139,12 +142,12 @@ FIM
 
 #### Teste de mesa (0.5 ponto)
 
-| N1 | N1 >= 0 | R | R = 0 | SAIDA | 
-|      --      |      --      |      --      |      --      |      --      | 
-| -2     | FALSE      | 1    |  FALSE     | O numero é impar    |
-| 10   | TRUE          | 0        | TRUE | O numero é par  |
-|      12      |      TRUE      |      0      |      TRUE      |      O numero é par      |
-|      15      |      TRUE      |      1      |      FALSE      |      O numero é impar      |
+| N1 | R | R = 0 | SAIDA | 
+|      --      |      --      |      --      |      --      | 
+| -2     |     |       | Digite um numero positivo    |
+|      3      | 1        | FALSE | O numero é impar  |
+|      4      |      0      |      TRUE      |      O numero é par      |
+|      6      |      0      |      TRUE      |      O numero é par      |
 
 ### Exercício 02 (2.5 pontos)
 Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
