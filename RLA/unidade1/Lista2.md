@@ -68,12 +68,12 @@ E --> F([FIM])
 
 ```
 ALGORITMO media
-DECLARE N1, N2, N3, N4 INTEIROS
+DECLARE N1, N2, N3, N4, M: INTEIROS
 INICIO
 ESCREVA "Digite quatro numeros inteiros: "
 LEIA N1, N2, N3, N4
-M = N1 + N2 + N3 + N4 / 4 ENTAO
-	ESCREVA "A media desses quatro numeros é: ", M
+M <- (N1 + N2 + N3 + N4) / 4
+ESCREVA "A media desses quatro numeros é: ", M
 FIM
 
 
