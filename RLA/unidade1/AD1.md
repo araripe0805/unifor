@@ -151,22 +151,20 @@ J --LOOP--> E
 
 ```
 Algoritmo ContaAprovacoes
-DECLARE n, cont, i: REAIS
+DECLARE n, cont, i: INTEIROS
 INICIO
 ESCREVA "Digite o numero de alunos: "
 LEIA n
-cont = 0
+cont <- 0
 i = 1
 ENQUANTO i <= n FAÇA
     ESCREVA "Digite a nota do aluno: ", i
     LEIA nota
     SE nota >= 50 e nota <= 100 ENTAO
         cont =+ 1
-    SENAO
-        i =+ 1
-    FIM_ENQUANTO
-SENAO
-    ESCREVA "Numero de alunos aprovados: ", cont
+    i =+ 1
+FIM_ENQUANTO
+ESCREVA "Numero de alunos aprovados: ", cont
 FIM
 ```
 
@@ -239,13 +237,13 @@ SE n >= 0 ENTAO
     ENQUANTO i <= n FAÇA
         ESCREVA "Digite um número: "
         LEIA num
-        soma =+ num
-        i  =+1
-        FIM_ENQUANTO
-    SENAO
-        ESCREVA "A soma dos numeros é: ", soma
+        soma <- soma + num
+        i  <- i +1
+FIM_ENQUANTO
+    ESCREVA "A soma dos numeros é: ", soma
 SENAO
     ESCREVA "O valor deve ser maior ou igual a zero"
+FIM_SE
 FIM
 
 ```
