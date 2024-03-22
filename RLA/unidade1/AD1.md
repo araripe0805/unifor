@@ -228,7 +228,7 @@ K --LOOP--> G
 
 ```
 Algoritmo SomaNumeros
-DECLARE n, soma, i, num
+DECLARE n, soma, i, num: REAIS
 INICIO
 ESCREVA "Digite a quantidade de números
 (n >= 0): "
@@ -299,7 +299,19 @@ I --LOOP--> E
 
 ```
 Algoritmo SomaSerie
+DECLARE S, i, n, numerador, denominador: REAIS
 INICIO
+ESCREVA "Digite o numero de termos da serie S: "
+LEIA n
+S = 0
+PARA i de 0 ATE n PASSO 1 FAÇA
+    numerador = 2*i + 1
+    denominador =2*i + 2
+    termo = numerador / denominador
+    S += termo
+FIM_PARA
+    ESCREVA " Soma da série S é: " , S
+
 ...
 FIM
 ```
