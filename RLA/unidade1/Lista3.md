@@ -249,12 +249,14 @@ FIM
 ```
 #### TESTE DE MESA
 
-|      --      |      --      |      --      |      --      |
-
-
-
-
-
+|      N1      |      S      |      I      |      N2      |      S = S + N2      |      I = I + 1      |
+|      --      |      --      |      --      |      --      |      --      |      --      |
+|      5      |      0      |      1      |      4      |      4      |      2      |
+|      5      |      4      |      2      |      8      |      12      |      3      |
+|      5      |      12      |      3      |      12      |      24      |      4      |
+|      5      |      24      |      4      |      16      |      40      |      5      |
+|      5      |      40      |      5      |      20      |      60      |      6      |
+|      5      |      60      |      6      |            |            |            |
 
 ### Exercício 04 (2.5 pontos)
 Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. 
