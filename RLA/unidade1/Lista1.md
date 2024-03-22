@@ -196,5 +196,7 @@ FIM
 
 | I1 | I1 >= 18 | I2 | SAIDA | 
 |      --      |      --      |      --      |      --      |
-| 18     | 18 >= 18       | 0    |  Já pode tirar a CNH     |
-| 19   | 19 >= 18          | -1        | Já pode tirar a CNH |
+| 18     | TRUE       | 0    |  Já pode tirar a CNH     |
+| 19   | TRUE          | -1        | Já pode tirar a CNH |
+|      15      |      FALSE      |      3      |      O candidato deve esperar 3 anos      |
+|      13      |      FALSE      |      5      |      O candidato deve esperar 5 anos      |
