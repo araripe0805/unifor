@@ -84,7 +84,7 @@ SE S1 >= 500.00 ENTAO
 	S2 = S1 * 1.1
 SENAO
 	S2 = S1 * 1.2
-	ESCREVA "Seu novo salario é: ", S2
+ESCREVA "Seu novo salario é: ", S2
 FIM
 
 
@@ -97,8 +97,10 @@ FIM
 
 | S1 | S1 >= 500.00 | S2 | SAIDA | 
 |      --      |      --      |      --      |      --      |
-| 200     | 200.00 >= 500.00       | 240.00    |  Seu novo salario é: 240.00     |
-| 800   | 800.00 >= 500.00          | 880.00        | Seu novo salario é: 880.00 |
+| 200     | FALSE       | 240.00    |  Seu novo salario é: 240.00     |
+| 800   | TRUE          | 880.00        | Seu novo salario é: 880.00 |
+|      500      |      TRUE      |      550.00      |      Seu novo salario é: 550.00      |
+|      100      |      FALSE      |      120.00      |      Seu novo salario é: 120.00      |
 
 ## Exercício 03 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
@@ -132,7 +134,7 @@ M = N1 + N2 / 2
 SE M >= 7.00 ENTAO
 	ESCREVA "O aluno foi aprovado com media: ", M
 SENAO 
-	ESCREVA "O aluno foi aprovado com media: ", M
+	ESCREVA "O aluno foi reprovado com media: ", M
 FIM
 
 
@@ -144,8 +146,10 @@ FIM
 
 | N1 | N2 | M | M >= 7.00 | SAIDA |
 |      --      |      --      |      --      |      --      |      --      |
-| 8.00     | 7.00      | 7.50    |  7.50 >= 7.00     | Aluno aprovado |
-| 5.00   | 6.00          | 5.50        | 5.50 <= 7.00 | Aluno reprovado |
+| 8.00     | 7.00      | 7.50    |  TRUE     | Aluno aprovado |
+| 5.00   | 6.00          | 5.50        | FALSE | Aluno reprovado |
+|      3.00      |      8.00      |      5.50      |      FALSE      |      Aluno reprovado      |
+|      8.00      |      8.00      |      8.00      |      TRUE      |      Aluno aprovado      |
 
 ## Exercício 04 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
