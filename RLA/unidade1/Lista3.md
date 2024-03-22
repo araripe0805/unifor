@@ -122,16 +122,16 @@ DECLARE N1, R : INTEIROS
 INICIO
 ESCREVA "Digite um numero inteiro e positivo"
 LEIA N1
-ENQUANTO N1 > 0 ENTAO
+ENQUANTO N1 < 0 ENTAO
 	ESCREVA "Digite um numero positivo"
-	FIM_ENQUANTO
+FIM_ENQUANTO
 SE N1 >= 0 ENTAO
-	R = N1 % 2
+	R <- N1 % 2
 	SE R = 0 ENTAO 
 		ESCREVA "O numero é par"
 	SENAO 
 		ESCREVA "O numero é impar"
-	FIM_SE
+FIM_SE
 FIM
 	
 
