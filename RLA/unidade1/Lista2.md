@@ -122,10 +122,11 @@ FIM
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| C | F | SAIDA |
+|      --      |      --      |      --      | 
+| 50     | 122       | A temperatura em fahrenheit é: 122    |
+| 90   | 194          | A temperatura em fahrenheit é: 194        |
+|      20      |      68      |      A temperatura em fahrenheit é: 68      |
 
 ### Exercício 03 (2.5 pontos)
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
