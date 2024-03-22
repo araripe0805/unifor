@@ -104,7 +104,7 @@ flowchart TD
 A([INICIO]) --> B{{Digite um numero inteiro e positivo}}
 B --> C[/N1/]
 C --> D{N1 >= 0}
-D --> E{{O numero deve ser positivo}}
+D --FALSE--> E{{O numero deve ser positivo}}
 E --LOOP--> B
 D --TRUE--> F[R = N1 % 2]
 F --> G{R = 0}
