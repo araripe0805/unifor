@@ -175,8 +175,9 @@ INICIO
 N1 = 0
 ENQUANTO N1 <= 30 FAÇA
 	ESCREVA "Numero = N1"
-	N1 =+ 3
+	N1 <- N1 + 3
 FIM_ENQUANTO
+FIM
 
 
 ```
