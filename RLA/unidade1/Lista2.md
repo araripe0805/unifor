@@ -164,17 +164,20 @@ DECLARE N1, N2, R : REAIS, O1: CARACTERES
 INICIO 
 ESCREVA "Digite dois numeros reais e um operador"
 LEIA N1, N2, O1
-SE O1 =+ ENTAO
-	R = N1 + N2
+SE O1 = + ENTAO
+	R <- N1 + N2
 SENAO 
-O1 =- ENTAO
-	R = N1 - N2
+O1 = - ENTAO
+	R <- N1 - N2
 	SENAO 
-	O1 =* ENTAO
-		R = N1 * N2
+	O1 = * ENTAO
+		R <- N1 * N2
 		SENAO
-		O1 =/ ENTAO
-			R = N1 / N2
+		O1 = / ENTAO
+			R <- N1 / N2
+		FIM_SE
+	FIM_SE
+FIM_SE
 ESCREVA "O resultado da O1 é: R"
 FIM
 	
