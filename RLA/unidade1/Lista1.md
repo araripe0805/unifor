@@ -84,6 +84,7 @@ SE S1 >= 500.00 ENTAO
 	S2 <- S1 * 1.1
 SENAO
 	S2 <- S1 * 1.2
+FIM_SE
 ESCREVA "Seu novo salario é: ", S2
 FIM
 
@@ -135,6 +136,7 @@ SE M >= 7.00 ENTAO
 	ESCREVA "O aluno foi aprovado com media: ", M
 SENAO 
 	ESCREVA "O aluno foi reprovado com media: ", M
+FIM_SE
 FIM
 
 
