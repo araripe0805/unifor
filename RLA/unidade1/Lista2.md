@@ -175,8 +175,6 @@ O1 = - ENTAO
 		SENAO
 		O1 = / ENTAO
 			R <- N1 / N2
-		FIM_SE
-	FIM_SE
 FIM_SE
 ESCREVA "O resultado da O1 é: R"
 FIM
@@ -201,16 +199,16 @@ Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A 
 flowchart TD
 A([INICIO]) --> B{{Digite uma idade: }}
 B --> C[/I1/]
-C --> D{5 >= I1 <=7}
+C --> D{5 <= I1 <=7}
 D --TRUE--> E{{A categoria é infantio A}}
 E --> F([FIM])
-D --FALSE--> G{8 >= I1 <= 10}
+D --FALSE--> G{8 <= I1 <= 10}
 G --TRUE--> H{{A categoria é infantia B}}
 H --> F
-G --FALSE--> I{11 >= I1 <= 13}
+G --FALSE--> I{11 <= I1 <= 13}
 I --TRUE--> J{{A categoria é juvenil A}}
 J --> F
-I --FALSE--> L{14 >= I1 <= 17}
+I --FALSE--> L{14 <= I1 <= 17}
 L --TRUE--> K{{A categoria é juvenil B}}
 K --> F
 L --FALSE--> M{I1 >= 18}
@@ -240,10 +238,7 @@ SE I1 5 >= I1 <= 7 ENTAO
 				SENAO
 				I1 >= 18 ENTAO 
 					ESCREVA "A categoria é adulto"
-				FIM_SE
-			FIM_SE
-		FIM_SE
-	FIM_SE
+FIM_SE
 FIM
 				
 	
@@ -254,9 +249,9 @@ FIM
 
 #### Teste de mesa (0.5 ponto)
 
-| I1 | SAIDA | 
-|      --      |      --      | 
-| 5     | A categoria é infantil A       |
-| 11   | A categoria é juvenil A          |
-| 18   | A categoria é adulta         |
-| 15   | A categoria é juvenil B          |
+| I1 | 5<= I1 <= 7 |      8<= I1 <= 10      |      11<= I1 <= 13      |      14 <= I1 <= 17      |      I1 >= 18      |      SAIDA      | 
+|      --      |      --      |      --      |      --      |      --      |      --      |      --      | 
+| 5     | TRUE       |      FALSE      |      FALSE      |      FALSE      |      FALSE      |      A categoria é Infantil A      |
+| 11   | FALSE          |      FALSE      |      TRUE      |      FALSE      |      FALSE      |      A categoria é Juvenil A      |
+| 18   | FALSE         |      FALSE      |      FALSE      |      FALSE      |      TRUE      |      A categoria é Adulta      |
+| 15   | FALSE          |      FALSE      |      FALSE      |      TRUE      |      FALSE      |      A categori a é Juvenil B      |
