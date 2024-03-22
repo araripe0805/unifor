@@ -177,15 +177,16 @@ G --> H
 
 ```
 ALGORITMO CNH
-VERIFICAR I1, I2 NUMERICOS
+VERIFICAR I1, I2: NUMERICOS
 INICIO
 ESCREVA "Digite sua idade: "
 LEIA I1
 SE I1 >= 18 ENTAO
 	ESCREVA "Já pode tirar a CNH"
 SENAO
-	I2 = 18 - I1
+	I2 <- 18 - I1
 	ESCREVA "O candidato devera esperar: ", I2
+FIM_SE
 FIM
 
 
