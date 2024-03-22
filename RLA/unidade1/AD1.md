@@ -78,9 +78,9 @@ ESCREVA "Digite o valor da a: "
 LEIA a
 ESCREVA "Digite o valor b: "
 LEIA b
-aux = a
-a = b
-b = aux
+aux <- a
+a <- b
+b <- aux
 ESCREVA "a =", a
 ESCREVA "b =", b
 FIM
