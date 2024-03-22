@@ -263,23 +263,65 @@ Escreva um programa que leia a nota de diversos alunos, até que seja digitada u
 Nesse momento, ele mostra a média aritmética de todas as notas lidas e quantas notas foram lidas. 
 Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 
-#### Fluxograma (1.0 ponto)
+
+
+
+#### FLUXOGRAMA
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite o numero de notas: }}
+B --> C[/N1/]
+C --> D[S = 0]
+D --> E[[I DE 1 ATE N1 PASSO 1]]
+E --I <= N1--> F{{Digite a nota I: }}
+F --> G[/N2/]
+G --> H[S = S + N2]
+H --> I{N2 >= 0}
+I --TRUE--> J[I = I + 1]
+J --LOOP--> E
+I --FALSE--> O
+E --I > N1--> N{{Foram checadas todas as notas}}
+N --> O[M = S / N1]
+O --> P{{A media das N1 notas é: M}}
+P --> M([FIM])
 ```
 
-#### Pseudocódigo (1.0 ponto)
+#### PSEUDOCODIGO
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+ALGORITMO notas
+DECLARE N1, I: INTEIROS, S, N2, M: REAIS
+INICIO
+ESCREVA "Digite uma quantidade de notas: "
+LEIA N1
+S <- 0
+PARA I DE 1 ATE N1 PASSO 1 FAÇA
+	ESCREVA "Digite a nota, I: "
+	LEIA N2
+	S <- S + N2
+	SE N2 >= 0 ENTAO
+	I <- I + 1
+	SENAO 
+		M <- S / N1
+		ESCREVA "A media de N1 notas é: ", M
+		FIM_SE
+FIM_PARA
+ESCREVA "Foram checadas todas notas"
+FIM
+	
+	
+
+
+
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| N1 | S | I | N2 | S = S + N2 |      N2 >= 0      |      I = I + 1      |      M      |      SAIDA      | 
+|      --      |      --      |      --      |      --      |      --      |      --      |      --      |      --      |      --      | 
+| 3     | 0       | 1    |  6     | 6    |      TRUE      |      2      |      6      |      A media das notas é: 6      |
+| 3   | 6          | 2        | 9 | 15  |      TRUE      |      3      |      7.5      |      A media das notas é: 7.5      |
+|      3      |      15      |      3      |      6      |      21      |      TRUE      |      4      |      7      |      A media das notas é: 7      |
+|      3      |      21      |      4      |            |            |            |            |      7      |      TODAS AS NOTAS FORAM CHECADAS      |
+
